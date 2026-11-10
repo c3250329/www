@@ -7,18 +7,20 @@
     <style>
         #message{
             color: red;
+            display: inline;
         }
     </style>
 </head>
 <body>
     <h1>座席の予約</h1>
     <p>東京会場</p><div id="message"><strong>（予約受付中）</strong></div> 
-    <p><button onclick="showAnser();">予約する</button></p>
+    <p id="btn"><button onclick="showAnser();">予約する</button></p>
 
     <script>
         function showAnser(){
         let anserBox = document.getElementById('message');
-        anserBox.innerHTML = '<strong>（予約済み）</strong> <br><strong>ありがとうございました。</strong>';
+        anserBox.innerHTML = '<strong>（予約済み）</strong>';
+        document.getElementById('btn').innerHTML = '<strong>ありがとうございました。</strong>'
         }
     </script>
     
