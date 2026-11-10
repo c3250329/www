@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>要素の取得と内容の変更</title>
+    <style>
+        #message{
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <h1>座席の予約</h1>
-    <p>東京会場</p> <div id="message"></div>
+    <p>東京会場</p> <div id="message"><strong>（予約受付中）</strong></div>
+    <p><button onclick="showAnswer();">予約する</button></p>
+
+    <script>
+        let anserBox = document.getElementById('message');
+        anserBox.innerHTML = '（予約済み） <br><p><strong>ありがとうございました。</strong></p>'
+    </script>
     
 </body>
 </html>
