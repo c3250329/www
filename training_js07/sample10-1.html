@@ -6,7 +6,7 @@
     <title>関数</title>
 </head>
 <body>
-    <p><button onclick="showgreetings();">挨拶</button></p>
+    
     <p id="result"></p>
     <script>
         function greetings(){
@@ -16,9 +16,9 @@
             else if(hour<18)return"こんにちは"
             else return"こんばんは"
         }
-        function showgreetings(){
-            document.getElementById('result').innerHTML = greetings
-        }
+        
+            document.getElementById('result').innerHTML = greetings();
+        
     </script>
     
 </body>
