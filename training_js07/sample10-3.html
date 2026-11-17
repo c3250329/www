@@ -3,16 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>電卓</title>
+    <title>計算</title>
 </head>
 <body>
-    <input id='n1' type="text">
-    <input id='n2' type="text"><br>
-    <button onclick="calc('+')">+</button>
-    <button onclick="calc('-')">-</button>
-    <button onclick="calc('*')">*</button>
-    <button onclick="calc('/')">/</button>
-    <p id = 'ans'>答えは、</p>
+   
     <script>
         function calculateResult(op1,op2,operator){
             let result=0
@@ -34,15 +28,9 @@
                     '演算子は「+,-,*,/」の中から選んでください')
 
             }
-            return result
+            return result;
         }
-        function calc(op){
-            const a = Number(document.getElementById('n1').value)
-            const b = Number(document.getElementById('n2').value)
-            const result = calculateResult(a,b,op)
-            document.getElementById('ans').innerHTML = '答え＝'+result
-
-        }
+        document.body.innerHTML = calculateResult(10,5,'+');
     </script>
     
 </body>
