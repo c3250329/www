@@ -6,13 +6,18 @@
     <title>関数</title>
 </head>
 <body>
+    <p><button onclick="showgreetings();">挨拶</button></p>
+    <p id="result"></p>
     <script>
         function greetings(){
             const today = new Date()
             const hour =today.getHours()
-            if (hour >=5 && hours < 9)return"おはようございます"
+            if (hour >=5 && hour < 9)return"おはようございます"
             else if(hour<18)return"こんにちは"
             else return"こんばんは"
+        }
+        function showgreetings(){
+            document.getElementById('result').innerHTML = greetings
         }
     </script>
     
