@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum関数</title>
+</head>
+<body>
+    <h1>計算結果</h1>
+    <p id="result"></p>
+    <script>
+        function sum(a,b){
+            return a+b
+        }
+        const sum = (a,b)=>a+b
+
+        function fibo(n){
+            if(n<2){
+                return n
+            }
+            return fibo(n-1) + fibo(n-2)
+        }
+        const fibo = (n)=>n<2 ? n : fibo(n-1) + fibo(n-2)
+        //(n)=>n<2が真ならn、偽ならfibo(n-1) + fibo(n-2)
+
+        function betweenOrBound(low,high,n){
+            return n < low ? low : (n>high ? high : n)
+        }
+        const betweenOrBound = (low,high,n)=>{
+            if(n>=low && n<=high)
+            return n
+         else if(n<low)
+         return low
+         else
+         return high
+        }
+        document.getElementById('result').innerHTML= "sum(2, 3)の結果: " + sum(2, 3) + "<br>" +
+            "fibo(3)の結果: " + fibo(3) + "<br>" + "betweenOrBound(10, 20, 25)の結果: " + betweenOrBound(10, 20, 25)
+    </script>
+    
+</body>
+</html>
