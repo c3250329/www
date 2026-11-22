@@ -9,7 +9,7 @@
   #continue{
     color: blue;
     text-decoration: underline;
-    cursor: pointer;
+    cursor: pointer; /*マウスポインタ―を手の形に*/
   }
 </style>
 </head>
@@ -25,9 +25,9 @@
 <p>ぜひ、ご参加ください。</p>
 
 <script>
-let list = ['横浜（9/12）', '大阪（9/18）', '広島（9/20）', '福岡（9/23）'];
+let list = ['横浜（9/12）', '大阪（9/18）', '広島（9/20）', '福岡（9/23）']; //箱に配列を保存
 function showList() {
-  let ulBox = document.getElementById('schedule');
+  let ulBox = document.getElementById('schedule'); //HTML内にあるid="schedule"の要素を取得し、ulBoxという変数に保存
   ulBox.insertAdjacentHTML('beforeend', '<li>' + list[0] + '</li>');
   ulBox.insertAdjacentHTML('beforeend', '<li>' + list[1] + '</li>');
   ulBox.insertAdjacentHTML('beforeend', '<li>' + list[2] + '</li>');
