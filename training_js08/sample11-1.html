@@ -9,7 +9,7 @@
   #continue{
     color: blue;
     text-decoration: underline;
-    cursor: pointer;
+    cursor: pointer; /*マウスのポインター*/
   }
 </style>
 </head>
@@ -26,11 +26,16 @@
 
 <script>
 function showList() {
-  let ulBox = document.getElementById('schedule');
+  let ulBox = document.getElementById('schedule'); //ulのボックス
   ulBox.insertAdjacentHTML('beforeend', '<li>横浜（9/12）</li>');
   ulBox.insertAdjacentHTML('beforeend', '<li>大阪（9/18）</li>');
   ulBox.insertAdjacentHTML('beforeend', '<li>広島（9/20）</li>');
   ulBox.insertAdjacentHTML('beforeend', '<li>福岡（9/23）</li>');
+  //insertAdjacentHTML()=scriptで指定した要素を基準に文字列を解析して特定の位置に挿入する
+  //beforebegin=要素の直前
+  //afterbegin=要素の内部の先頭
+  //beforeend=要素内部の末尾
+  //afterend=要素の直後
 }
 </script>
 
