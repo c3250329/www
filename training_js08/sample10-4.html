@@ -19,17 +19,17 @@
 <button onclick="showWest()">関西を表示</button>
 
 <script>
-let east = ['札幌（9/5）', '仙台（9/8）', '東京（9/11）', '横浜（9/12）'];
+let east = ['札幌（9/5）', '仙台（9/8）', '東京（9/11）', '横浜（9/12）']; //箱に入れている
 let west = ['大阪（9/18）', '広島（9/20）', '福岡（9/23）', ''];
-let list = document.querySelectorAll('#schedule li');
+let list = document.querySelectorAll('#schedule li'); //スケジュールのリストを書き換えたい
 function showWest() {
-  list[0].textContent = west[0];
+  list[0].textContent = west[0]; //大阪から
   list[1].textContent = west[1];
   list[2].textContent = west[2];
-  list[3].textContent = west[3];
+  list[3].textContent = west[3]; //空白
 }
 function showEast() {
-  list[0].textContent = east[0];
+  list[0].textContent = east[0]; //札幌から
   list[1].textContent = east[1];
   list[2].textContent = east[2];
   list[3].textContent = east[3];
