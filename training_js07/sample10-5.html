@@ -11,27 +11,29 @@
     <script>
         {
         function sum(a,b){
-            return a+b
+            return a+b //関数の計算結果を返す
         }
         }
-        const sum = (a,b)=>a+b
+        const sum = (a,b)=>a+b //アロー関数で関数を簡潔に書いている　=>a+bは実行する計算
+        //{}とreturnを省略している
         {
-        function fibo(n){
+        function fibo(n){ //フィボナッチ関数＝前の2つを足して次の数を作る（例：0, 1, 1, 2, 3, 5, 8,
             if(n<2){
-                return n
+                return n //nが0か1の場合
             }
-            return fibo(n-1) + fibo(n-2)
+            return fibo(n-1) + fibo(n-2) //nが2以上の場合直前の2つを足して自分自身を呼び出している
         }
         }
-        const fibo = (n)=>n<2 ? n : fibo(n-1) + fibo(n-2)
-        //(n)=>n<2が真ならn、偽ならfibo(n-1) + fibo(n-2)
+        const fibo = (n)=>n<2 ? n : fibo(n-1) + fibo(n-2) //アロー関数と参考演算子を使って省略
+        //n < 2が真ならn、偽ならfibo(n-1) + fibo(n-2)を返す
         {
-        function betweenOrBound(low,high,n){
+        function betweenOrBound(low,high,n){ //nをlowからhighの範囲に収めたい
             return n < low ? low : (n>high ? high : n)
+            //n<lowかを確認し正しければlowを返す。間違っていればn>highを確認し正しければhighを返す。lowとhighの間であればnをそのまま返す
         }
         }
         const betweenOrBound = (low,high,n)=>{
-            if(n>=low && n<=high)
+            if(n>=low && n<=high) //nがlow以上、かつhigh以下であるかを確認
             return n
          else if(n<low)
          return low
@@ -41,6 +43,8 @@
         
         document.getElementById('result').innerHTML= "sum(2, 3)の結果: " + sum(2, 3) + "<br>" +
             "fibo(3)の結果: " + fibo(3) + "<br>" + "betweenOrBound(10, 20, 25)の結果: " + betweenOrBound(10, 20, 25)
+            //fibo(3)の値を求めるために2番目の値と1番目の値に分解 fibo(0)=0,fibo(1)=1,fibo(2)=1,なので前後を足して２
+            //betweenOrBound(10, 20, 25)のあたいは25を１０と２０の間に収めたいので20になる
     </script>
     
 </body>
