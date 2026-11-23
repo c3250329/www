@@ -27,7 +27,7 @@
         function showList(){
             let ulbox = document.getElementById('schedule');
             for(let i=0;i<list.length;i++){ //リストの長さ
-                ulbox.insertAdjacentHTML('beforeend','<li>'+list[i]+'<li>'); //list[i]でカウンタと連動
+                ulbox.insertAdjacentHTML('beforeend','<li>'+list[i]+'</li>'); //list[i]でカウンタと連動
             }
             document.getElementById('continue').remove();
         }
