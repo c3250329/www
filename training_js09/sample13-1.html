@@ -30,17 +30,17 @@
         function createTable(){
             //ヘッダー行の作成
             let row = '<tr><th></th>';
-                for(let j=1;j<=9;j++){
+                for(let j=1;j<=9;j++){//1~9の見出しを作成
                     row = row+'<th>'+j+'</th>';
                 }
-                row =row+'</tr>';
-                document.getElementById('t_head').insertAdjacentHTML('beforeend',row)
+                row =row+'</tr>';//行の終了タグ
+                document.getElementById('t_head').insertAdjacentHTML('beforeend',row)//一番上の作成
 
                 //データの作成
                 for(let i=1;i<=9;i++){
-                    let row ='<tr><th>'+i+'</th>';
+                    let row ='<tr><th>'+i+'</th>';//各行の先頭を作成
                     for(let j=1;j<=9;j++){
-                        row = row+'<td>'+i*j+'</td>';
+                        row = row+'<td>'+i*j+'</td>';//掛け算の結果を１行ずつ追加
                     }
                     row=row+'</tr>';
                     document.getElementById('t_body').insertAdjacentHTML('beforeend',row)
