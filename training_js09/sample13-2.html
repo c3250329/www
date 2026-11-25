@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for構文</title>
+     <style>
+        #message{
+            width: 250px;
+            border: solid 1px gray;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        #count{
+            color: blue;
+            font-weight: 100;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Click Counter ★for構文</h1>
+    <p>ボタンをクリックすると、クリック回数に応じて結果が変わります。</p>
+    <p>JavaScriptのfor構文を使って処理を作ってみましょう。</p>
+    <p>クリック回数<span id="count">0</span>回</p>
+    <button onclick="clickBtn()">クリック</button>
+    <h3>結果</h3>
+    <p id="message">ここに結果が表示されます</p>
+
+    <script>
+        let Count = 0;
+        function clickBtn(){
+            Count++
+            document.getElementById('count').innerHTML=Count;
+            let result ='';
+            if(Count==1){
+                for(let i=1;i<=1;i++){
+                    result +='★';
+                }
+            }else if(Count==2){
+                for(let i=1;i<=5;i++){
+                    result +='★';
+                }
+            }else if(Count==3){
+                for(let i=1;i<=5;i++){
+                    result +=i+'';
+                }
+            }else if(Count==4){
+                for(let i=2;i<=10;i+=2){
+                     result +=i+'';
+                }
+            }else if(Count==5){
+                let sum=0;
+                for(let i=1;i<=Count;i++){
+                    sum +=i;
+                }
+            }else{
+                result='クリアしました。カウントを０に戻します。';
+                Count=0;
+            }
+            document.getElementById('message').innerHTML=result;
+        }
+
+
+    </script>
+    <small>&copy; JavaScript-for構文＆クリックイベント</small>
+
+
+    
+</body>
+</html>
