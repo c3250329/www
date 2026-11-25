@@ -32,7 +32,7 @@
     <script>
         let Count = 0;
         function clickBtn(){
-            Count=0;
+            Count++;
             document.getElementById('count').innerHTML=Count;
             let result ='';
             switch(Count){
@@ -66,9 +66,10 @@
             default:
                 result='クリアしました。カウントを０に戻します。';
                 Count=0;
-            
+            document.getElementById('count').innerHTML=Count;
+            break;}
             document.getElementById('message').innerHTML=result;
-    }}
+        }
 
 
     </script>
